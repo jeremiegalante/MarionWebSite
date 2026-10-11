@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AProposPage() {
   return (
     <>
-      <Navbar />
+      <Navbar variant="compact" />
       <main>
         <AboutHero />
         <AboutIntro />

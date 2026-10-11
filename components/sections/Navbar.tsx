@@ -17,7 +17,7 @@ const rightLinks: NavLink[] = [
   { label: 'Contact', href: '/contact' },
 ];
 
-export function Navbar() {
+export function Navbar({ variant = 'full' }: { variant?: 'full' | 'compact' }) {
   const pathname = usePathname();
 
   const isActive = (href: string) =>
@@ -34,6 +34,49 @@ export function Navbar() {
       {link.label}
     </Link>
   );
+
+  if (variant === 'compact') {
+    return (
+      <header className="w-full bg-background">
+        <div className="relative flex min-h-[56px] flex-col items-center justify-center gap-2 px-6 py-3 md:block">
+          <nav
+            aria-label="Expertises"
+            className="hidden md:absolute md:left-6 md:top-1/2 md:flex md:-translate-y-1/2 md:gap-7"
+          >
+            {leftLinks.map(renderLink)}
+          </nav>
+
+          <nav
+            aria-label="Navigation secondaire"
+            className="hidden md:absolute md:right-6 md:top-1/2 md:flex md:-translate-y-1/2 md:gap-7"
+          >
+            {rightLinks.map(renderLink)}
+          </nav>
+
+          <Link
+            href="/"
+            className="flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+          >
+            <Image
+              src="/assets/logo.png"
+              alt="Marion Ferran"
+              width={92}
+              height={64}
+              priority
+              className="h-8 w-auto md:h-9"
+            />
+          </Link>
+
+          <nav
+            aria-label="Navigation principale"
+            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 md:hidden"
+          >
+            {[...leftLinks, ...rightLinks].map(renderLink)}
+          </nav>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header className="w-full bg-background">

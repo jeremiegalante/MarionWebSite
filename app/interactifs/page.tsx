@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function InteractifsPage() {
   return (
     <>
-      <Navbar />
+      <Navbar variant="compact" />
       <main>
         <CategoryHero title="Interactifs" />
         <ProjectGrid images={images} altPrefix="Interactifs" />

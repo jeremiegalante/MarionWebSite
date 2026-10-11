@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function DesignGraphiquePage() {
   return (
     <>
-      <Navbar />
+      <Navbar variant="compact" />
       <main>
         <CategoryHero title="Design Graphique" />
         <ProjectGrid images={images} altPrefix="Design graphique" />
