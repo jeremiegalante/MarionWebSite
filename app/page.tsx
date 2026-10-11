@@ -12,6 +12,9 @@ export default function HomePage() {
     <>
       <Navbar />
       <main>
+        <h1 className="sr-only">
+          Marion Ferran, graphiste spécialisée en muséographie
+        </h1>
         <HomeHero />
         <RecentProjects />
         <ExpertiseLinks />
