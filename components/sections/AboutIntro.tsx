@@ -1,12 +1,13 @@
 import { Container } from '@/components/ui/Container';
+import { Typography } from '@/components/ui/Typography';
 
 export function AboutIntro() {
   return (
     <section className="w-full py-16 md:py-28">
       <Container className="grid gap-12 md:grid-cols-[2fr_3fr] md:items-center md:gap-16">
-        <p className="font-display text-2xl font-bold leading-snug text-primary md:text-3xl">
+        <Typography as="p" variant="lead" className="text-primary">
           Mon manifeste ? Mettre le design graphique au service de la transmission.
-        </p>
+        </Typography>
         <div className="space-y-5 font-sans text-base leading-relaxed text-blue md:text-lg">
           <p>
             {

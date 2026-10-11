@@ -1,3 +1,12 @@
+/*
+ * Manual, curated mapping of lib/tokens/tokens.json into Tailwind theme
+ * variables. tokens.json is the raw Figma extraction: it only exposes
+ * non-semantic hex colour keys (no colour roles), no spacing tokens at all,
+ * and radii keyed by a numeric scale (e.g. [300]) rather than names. The
+ * semantic colour names below are therefore chosen by hand from those hex
+ * values, and Tailwind's default spacing/type scale is used for all
+ * spacing/sizes. If tokens.json is re-extracted, review this mapping by hand.
+ */
 @theme {
   --color-primary: #ea4e52;
   --color-ink: #383836;

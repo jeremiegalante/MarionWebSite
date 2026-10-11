@@ -5,7 +5,7 @@ export function HomeHero() {
     <section className="relative w-full">
       <Image
         src="/assets/home/hero.jpg"
-        alt="Graphisme de l'exposition Bonnes mères au MUCEM"
+        alt=""
         width={1920}
         height={738}
         priority

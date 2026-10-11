@@ -44,8 +44,18 @@ dossier.
 ```bash
 npm run dev        # http://localhost:3000
 npm run lint       # ESLint
+npm run typecheck  # next typegen + tsc --noEmit
 npm run test:unit  # Vitest
 npm run test:visual # Playwright (build + serve sur :4310)
+```
+
+`npm run typecheck` lance `next typegen` avant `tsc --noEmit`. La génération
+préalable est nécessaire : `app/layout.tsx` utilise `LayoutProps<"/">`, un type
+écrit dans `.next/types/` (git-ignoré) par Next.js. Sans elle, `tsc --noEmit`
+échoue sur un clone neuf. Équivalent manuel :
+
+```bash
+npx next typegen && npx tsc --noEmit
 ```
 
 ## Extraction des tokens

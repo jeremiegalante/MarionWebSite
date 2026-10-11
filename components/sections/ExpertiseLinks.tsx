@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 
 const pills = [
@@ -19,13 +20,9 @@ export function ExpertiseLinks() {
         </Link>
         <div className="flex flex-wrap gap-3">
           {pills.map((pill) => (
-            <Link
-              key={pill.href}
-              href={pill.href}
-              className="bg-primary px-6 py-3 font-sans text-sm font-medium text-background transition-opacity hover:opacity-90 md:text-base"
-            >
+            <Button key={pill.href} href={pill.href}>
               {pill.label}
-            </Link>
+            </Button>
           ))}
         </div>
       </Container>

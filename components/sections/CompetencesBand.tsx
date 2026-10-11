@@ -1,3 +1,5 @@
+import { Typography } from '@/components/ui/Typography';
+
 export function CompetencesBand() {
   return (
     <section className="relative w-full bg-primary pt-16 md:pt-20">
@@ -5,9 +7,13 @@ export function CompetencesBand() {
         aria-hidden
         className="absolute right-0 top-0 hidden h-[76px] w-[200px] -translate-y-full bg-primary md:block"
       />
-      <h2 className="text-center font-display text-3xl font-bold text-background md:text-5xl">
+      <Typography
+        as="h2"
+        variant="sectionTitle"
+        className="text-center text-background"
+      >
         Mes domaines de compétence
-      </h2>
+      </Typography>
       <div className="h-40 md:h-80" aria-hidden />
     </section>
   );

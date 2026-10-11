@@ -14,6 +14,8 @@ from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF_DIR = os.path.join(ROOT, "docs", "reference")
 OUT_DIR = os.path.join(ROOT, "public", "assets")
+# Kept outside public/ so it is not served as a static file.
+MANIFEST_PATH = os.path.join(ROOT, "lib", "assets-manifest.json")
 
 CELL = 836
 # Measured content columns (x0, x1) of the 3-up grids: the 26px white
@@ -125,12 +127,13 @@ def main():
         )
         print(f"{rel_file:32s} {out_size[0]}x{out_size[1]}")
 
-    manifest_path = os.path.join(OUT_DIR, "manifest.json")
-    with open(manifest_path, "w", encoding="utf-8") as fh:
+    os.makedirs(os.path.dirname(MANIFEST_PATH), exist_ok=True)
+    with open(MANIFEST_PATH, "w", encoding="utf-8") as fh:
         json.dump(manifest, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
 
     print(f"\n{len(manifest)} assets written to {OUT_DIR}")
+    print(f"manifest written to {MANIFEST_PATH}")
 
 
 if __name__ == "__main__":

@@ -784,7 +784,7 @@ lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" -e "mirror -R --delete out/ /www/; b
 
 - [ ] **Step 3: Vérifier les gates de qualité**
 
-Run: `npm run lint && npx tsc --noEmit && npm run test:unit && npm run test:visual && npm run build`
+Run: `npm run lint && npx next typegen && npx tsc --noEmit && npm run test:unit && npm run test:visual && npm run build`
 Expected: tout passe ; `out/` contient une `index.html` par route.
 
 - [ ] **Step 4: Documenter**

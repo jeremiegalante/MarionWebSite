@@ -98,7 +98,7 @@ export function Navbar({ variant = 'full' }: { variant?: 'full' | 'compact' }) {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/assets/logo.png"
-            alt="Marion Ferran"
+            alt=""
             width={92}
             height={64}
             priority
