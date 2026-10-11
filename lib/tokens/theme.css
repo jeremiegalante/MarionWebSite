@@ -1,0 +1,14 @@
+@theme {
+  --color-primary: #ea4e52;
+  --color-ink: #383836;
+  --color-background: #ffffff;
+  --color-blue: #02499a;
+  --color-teal: #009eb9;
+  --color-muted: #d9d9d9;
+
+  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-pill: 300px;
+}
