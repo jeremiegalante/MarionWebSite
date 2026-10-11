@@ -1,25 +1,25 @@
 import { Navbar } from '@/components/sections/Navbar';
-import { Hero } from '@/components/sections/Hero';
-
-const navLinks = [
-  { label: 'Signalétique', href: '/signaletique/' },
-  { label: 'Interactifs', href: '/interactifs/' },
-  { label: 'Design graphique', href: '/design-graphique/' },
-  { label: 'A propos', href: '/a-propos/' },
-  { label: 'Contact', href: '/contact/' },
-];
+import { Footer } from '@/components/sections/Footer';
+import { HomeHero } from '@/components/sections/HomeHero';
+import { RecentProjects } from '@/components/sections/RecentProjects';
+import { ExpertiseLinks } from '@/components/sections/ExpertiseLinks';
+import { AboutSection } from '@/components/sections/AboutSection';
+import { RedBand } from '@/components/sections/RedBand';
+import { ContactCta } from '@/components/sections/ContactCta';
 
 export default function HomePage() {
   return (
     <>
-      <Navbar links={navLinks} />
+      <Navbar />
       <main>
-        <Hero
-          title="Projets récents"
-          cta="Voir tous mes projets"
-          tabs={['Design graphique', 'Signalétique', 'Interactifs']}
-        />
+        <HomeHero />
+        <RecentProjects />
+        <ExpertiseLinks />
+        <AboutSection />
+        <RedBand />
+        <ContactCta />
       </main>
+      <Footer />
     </>
   );
 }
