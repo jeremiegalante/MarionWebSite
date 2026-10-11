@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# jeremy — portfolio statique généré depuis Figma
 
-## Getting Started
+Site vitrine multi-pages (Next.js App Router, TypeScript, export statique)
+généré à partir de maquettes Figma, sans backend, destiné à un hébergement
+mutualisé type OVH (upload FTP).
 
-First, run the development server:
+## Stack
+
+| Rôle | Choix |
+|---|---|
+| Framework | Next.js 16 (App Router) + `output: 'export'` |
+| Style | Tailwind CSS 4 (`@theme` dans `lib/tokens/theme.css`) |
+| Tests | Vitest (unitaire) + Playwright (visuel desktop/mobile) |
+| Source design | API REST Figma (personal access token) |
+
+## Prérequis
+
+- Node.js 20+ et npm
+- `lftp` (déploiement FTP) — `sudo apt install lftp`
+- Un personal access token Figma (gratuit) pour (ré)extraire les tokens
+
+## Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Routes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Route | Fichier exporté |
+|---|---|
+| `/` | `out/index.html` |
+| `/design-graphique` | `out/design-graphique/index.html` |
+| `/signaletique` | `out/signaletique/index.html` |
+| `/interactifs` | `out/interactifs/index.html` |
+| `/a-propos` | `out/a-propos/index.html` |
+| `/contact` | `out/contact/index.html` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`trailingSlash: true` fait que chaque route produit un `index.html` dans son
+dossier.
 
-## Learn More
+## Développement
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev        # http://localhost:3000
+npm run lint       # ESLint
+npm run test:unit  # Vitest
+npm run test:visual # Playwright (build + serve sur :4310)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Extraction des tokens
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Les design tokens (couleurs, typographie, espacements, rayons) sont lus depuis
+l'arbre Figma via l'API REST, puis écrits dans `lib/tokens/tokens.json` et
+mappés dans `lib/tokens/theme.css`.
 
-## Deploy on Vercel
+1. Renseigner le token et la file key dans `.env.local` (git-ignoré) :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   FIGMA_API_KEY=figd_xxx
+   FIGMA_FILE_KEY=KPIKm3YvmSA10T5c4OwSMO
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Extraire les tokens :
+
+   ```bash
+   FIGMA_API_KEY=figd_xxx node lib/figma/extract-tokens.mjs "$FIGMA_FILE_KEY"
+   ```
+
+Les identifiants des frames et le mapping frame → route sont documentés dans
+`docs/figma-inputs.md`.
+
+## Build
+
+```bash
+npm run build          # next build -> out/
+npm run build:static   # alias explicite pour l'export statique
+```
+
+Le résultat est un dossier `out/` entièrement statique (HTML, CSS, JS, assets).
+
+## Déploiement FTP (OVH)
+
+`scripts/deploy.sh` construit le site puis synchronise `out/` vers le serveur
+via `lftp` (`mirror -R --delete`).
+
+1. Exporter les identifiants FTP :
+
+   ```bash
+   export FTP_HOST=ftp.example.com
+   export FTP_USER=mon_utilisateur
+   export FTP_PASS=mon_mot_de_passe
+   ```
+
+2. Lancer le déploiement :
+
+   ```bash
+   ./scripts/deploy.sh
+   ```
+
+Le script échoue immédiatement si l'une des trois variables `FTP_HOST`,
+`FTP_USER`, `FTP_PASS` n'est pas définie. La cible distante est `/www/` ;
+l'option `--delete` supprime les fichiers distants absents du build.
