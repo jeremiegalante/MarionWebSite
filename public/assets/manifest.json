@@ -1,0 +1,409 @@
+[
+  {
+    "name": "dg-01",
+    "file": "design-graphique/dg-01.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      0,
+      624,
+      836,
+      1460
+    ]
+  },
+  {
+    "name": "dg-02",
+    "file": "design-graphique/dg-02.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      862,
+      624,
+      1696,
+      1460
+    ]
+  },
+  {
+    "name": "dg-03",
+    "file": "design-graphique/dg-03.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      1722,
+      624,
+      2558,
+      1460
+    ]
+  },
+  {
+    "name": "dg-04",
+    "file": "design-graphique/dg-04.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      0,
+      1486,
+      836,
+      2322
+    ]
+  },
+  {
+    "name": "dg-05",
+    "file": "design-graphique/dg-05.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      862,
+      1486,
+      1696,
+      2322
+    ]
+  },
+  {
+    "name": "dg-06",
+    "file": "design-graphique/dg-06.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      1722,
+      1486,
+      2558,
+      2322
+    ]
+  },
+  {
+    "name": "dg-07",
+    "file": "design-graphique/dg-07.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      0,
+      2348,
+      836,
+      3184
+    ]
+  },
+  {
+    "name": "dg-08",
+    "file": "design-graphique/dg-08.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      862,
+      2348,
+      1696,
+      3184
+    ]
+  },
+  {
+    "name": "dg-09",
+    "file": "design-graphique/dg-09.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      1722,
+      2348,
+      2558,
+      3184
+    ]
+  },
+  {
+    "name": "dg-10",
+    "file": "design-graphique/dg-10.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      0,
+      3210,
+      836,
+      4046
+    ]
+  },
+  {
+    "name": "dg-11",
+    "file": "design-graphique/dg-11.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      862,
+      3210,
+      1696,
+      4046
+    ]
+  },
+  {
+    "name": "dg-12",
+    "file": "design-graphique/dg-12.jpg",
+    "source": "Design Graphique.png",
+    "box": [
+      1722,
+      3210,
+      2558,
+      4046
+    ]
+  },
+  {
+    "name": "sig-01",
+    "file": "signaletique/sig-01.jpg",
+    "source": "Signalétique.png",
+    "box": [
+      0,
+      624,
+      836,
+      1460
+    ]
+  },
+  {
+    "name": "sig-02",
+    "file": "signaletique/sig-02.jpg",
+    "source": "Signalétique.png",
+    "box": [
+      862,
+      624,
+      1696,
+      1460
+    ]
+  },
+  {
+    "name": "sig-03",
+    "file": "signaletique/sig-03.jpg",
+    "source": "Signalétique.png",
+    "box": [
+      1722,
+      624,
+      2558,
+      1460
+    ]
+  },
+  {
+    "name": "sig-04",
+    "file": "signaletique/sig-04.jpg",
+    "source": "Signalétique.png",
+    "box": [
+      0,
+      1486,
+      836,
+      2322
+    ]
+  },
+  {
+    "name": "sig-05",
+    "file": "signaletique/sig-05.jpg",
+    "source": "Signalétique.png",
+    "box": [
+      862,
+      1486,
+      1696,
+      2322
+    ]
+  },
+  {
+    "name": "sig-06",
+    "file": "signaletique/sig-06.jpg",
+    "source": "Signalétique.png",
+    "box": [
+      1722,
+      1486,
+      2558,
+      2322
+    ]
+  },
+  {
+    "name": "int-01",
+    "file": "interactifs/int-01.jpg",
+    "source": "Interactifs.png",
+    "box": [
+      0,
+      624,
+      836,
+      1460
+    ]
+  },
+  {
+    "name": "int-02",
+    "file": "interactifs/int-02.jpg",
+    "source": "Interactifs.png",
+    "box": [
+      862,
+      624,
+      1696,
+      1460
+    ]
+  },
+  {
+    "name": "int-03",
+    "file": "interactifs/int-03.jpg",
+    "source": "Interactifs.png",
+    "box": [
+      1722,
+      624,
+      2558,
+      1460
+    ]
+  },
+  {
+    "name": "int-04",
+    "file": "interactifs/int-04.jpg",
+    "source": "Interactifs.png",
+    "box": [
+      0,
+      1486,
+      836,
+      2322
+    ]
+  },
+  {
+    "name": "int-05",
+    "file": "interactifs/int-05.jpg",
+    "source": "Interactifs.png",
+    "box": [
+      862,
+      1486,
+      1696,
+      2322
+    ]
+  },
+  {
+    "name": "int-06",
+    "file": "interactifs/int-06.jpg",
+    "source": "Interactifs.png",
+    "box": [
+      1722,
+      1486,
+      2558,
+      2322
+    ]
+  },
+  {
+    "name": "hero",
+    "file": "home/hero.jpg",
+    "source": "HOME.png",
+    "box": [
+      0,
+      398,
+      2560,
+      1382
+    ]
+  },
+  {
+    "name": "recent-01",
+    "file": "home/recent-01.jpg",
+    "source": "HOME.png",
+    "box": [
+      0,
+      1686,
+      622,
+      2312
+    ]
+  },
+  {
+    "name": "recent-02",
+    "file": "home/recent-02.jpg",
+    "source": "HOME.png",
+    "box": [
+      644,
+      1686,
+      1269,
+      2312
+    ]
+  },
+  {
+    "name": "recent-03",
+    "file": "home/recent-03.jpg",
+    "source": "HOME.png",
+    "box": [
+      1292,
+      1686,
+      1917,
+      2312
+    ]
+  },
+  {
+    "name": "recent-04",
+    "file": "home/recent-04.jpg",
+    "source": "HOME.png",
+    "box": [
+      1932,
+      1710,
+      2533,
+      2287
+    ]
+  },
+  {
+    "name": "recent-05",
+    "file": "home/recent-05.jpg",
+    "source": "HOME.png",
+    "box": [
+      0,
+      2334,
+      622,
+      2960
+    ]
+  },
+  {
+    "name": "recent-06",
+    "file": "home/recent-06.jpg",
+    "source": "HOME.png",
+    "box": [
+      644,
+      2334,
+      1269,
+      2960
+    ]
+  },
+  {
+    "name": "recent-07",
+    "file": "home/recent-07.jpg",
+    "source": "HOME.png",
+    "box": [
+      1292,
+      2334,
+      1917,
+      2960
+    ]
+  },
+  {
+    "name": "recent-08",
+    "file": "home/recent-08.jpg",
+    "source": "HOME.png",
+    "box": [
+      1939,
+      2334,
+      2560,
+      2960
+    ]
+  },
+  {
+    "name": "portrait",
+    "file": "home/portrait.jpg",
+    "source": "HOME.png",
+    "box": [
+      1545,
+      3485,
+      2150,
+      4085
+    ]
+  },
+  {
+    "name": "bottom-01",
+    "file": "home/bottom-01.jpg",
+    "source": "HOME.png",
+    "box": [
+      122,
+      4730,
+      848,
+      5816
+    ]
+  },
+  {
+    "name": "bottom-02",
+    "file": "home/bottom-02.jpg",
+    "source": "HOME.png",
+    "box": [
+      906,
+      4730,
+      1632,
+      5816
+    ]
+  },
+  {
+    "name": "bottom-03",
+    "file": "home/bottom-03.jpg",
+    "source": "HOME.png",
+    "box": [
+      1690,
+      4730,
+      2416,
+      5816
+    ]
+  }
+]
